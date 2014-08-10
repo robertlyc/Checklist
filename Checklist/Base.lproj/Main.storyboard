@@ -99,7 +99,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="8AO-4M-w1b">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rwp-AH-oD1">
                             <connections>
-                                <segue destination="Ydu-LU-GJI" kind="modal" id="21x-oP-2oa"/>
+                                <segue destination="Ydu-LU-GJI" kind="modal" identifier="AddItem" id="21x-oP-2oa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
