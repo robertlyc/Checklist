@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1668" y="64"/>
         </scene>
-        <!--Checklist View Controller - Checklists-->
+        <!--Checklists View Controller - Checklists-->
         <scene sceneID="3i9-ab-Ngl">
             <objects>
-                <tableViewController id="CfZ-gk-uoe" customClass="ChecklistViewController" sceneMemberID="viewController">
+                <tableViewController id="CfZ-gk-uoe" customClass="ChecklistsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6Hc-HD-2E3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -25,14 +25,11 @@
         item.text = self.textField.text;
         item.checked = NO;
         
-        [self.delegate ItemDetailViewController:self didFinishAddingItem:item];
+        [self.delegate itemDetailViewController:self didFinishAddingItem:item];
     } else {
         self.itemToEdit.text = self.textField.text;
-        [self.delegate ItemDetailViewController:self didFinishEditingItem:self.itemToEdit];
+        [self.delegate itemDetailViewController:self didFinishEditingItem:self.itemToEdit];
     }
-    
-    
-    
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -43,7 +40,6 @@
     NSString *newText = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     self.doneBarButton.enabled = (newText.length > 0);
-
     
     return YES;
 }
