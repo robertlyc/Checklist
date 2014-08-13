@@ -6,14 +6,15 @@
 //  Copyright (c) 2014年 SpringShine. All rights reserved.
 //
 
-#import "ChecklistsViewController.h"
+#import "ChecklistViewController.h"
 #import "ChecklistItem.h"
+#import "Checklist.h"
 
-@interface ChecklistsViewController ()
+@interface ChecklistViewController ()
 
 @end
 
-@implementation ChecklistsViewController {
+@implementation ChecklistViewController {
     NSMutableArray *_items;
 }
 
@@ -101,38 +102,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    NSLog(@"Documents folder is %@", [self documentsDirectory]);
-//    NSLog(@"Data file path is %@", [self dataFilePath]);
-//    
-//    _items = [[NSMutableArray alloc] initWithCapacity:20];
-//    
-//    ChecklistItem *item;
-//	
-//    item =[[ChecklistItem alloc] init];
-//    item.text = @"Walk the dog";
-//    item.checked = NO;
-//    [_items addObject:item];
-//    
-//    item = [[ChecklistItem alloc] init];
-//    item.text = @"Brush teeth";
-//    item.checked = YES;
-//    [_items addObject:item];
-//    
-//    item = [[ChecklistItem alloc] init];
-//    item.text = @"Learn iOS development";
-//    item.checked = YES;
-//    [_items addObject:item];
-//    
-//    item = [[ChecklistItem alloc] init];
-//    item.text = @"Soccer practice";
-//    item.checked = NO;
-//    [_items addObject:item];
-//    
-//    item = [[ChecklistItem alloc] init];
-//    item.text = @"Eat ice cream";
-//    item.checked = YES;
-//    [_items addObject:item];
+    self.title = self.checklist.name;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
