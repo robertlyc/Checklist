@@ -27,6 +27,7 @@
 		E19CBFCB198E752F00A4A50C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19CBFAD198E752F00A4A50C /* UIKit.framework */; };
 		E19CBFD3198E752F00A4A50C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E19CBFD1198E752F00A4A50C /* InfoPlist.strings */; };
 		E19CBFD5198E752F00A4A50C /* ChecklistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E19CBFD4198E752F00A4A50C /* ChecklistTests.m */; };
+		E1A239EA19A2EC6600930DC4 /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A239E919A2EC6600930DC4 /* IconPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		E19CBFD0198E752F00A4A50C /* ChecklistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChecklistTests-Info.plist"; sourceTree = "<group>"; };
 		E19CBFD2198E752F00A4A50C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E19CBFD4198E752F00A4A50C /* ChecklistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistTests.m; sourceTree = "<group>"; };
+		E1A239E819A2EC6600930DC4 /* IconPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPickerViewController.h; sourceTree = "<group>"; };
+		E1A239E919A2EC6600930DC4 /* IconPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				E12F3B7F1999158500FF8BA3 /* ListDetailViewController.m */,
 				E12F3B81199BD16100FF8BA3 /* DataModel.h */,
 				E12F3B82199BD16100FF8BA3 /* DataModel.m */,
+				E1A239E819A2EC6600930DC4 /* IconPickerViewController.h */,
+				E1A239E919A2EC6600930DC4 /* IconPickerViewController.m */,
 				E19CBFC1198E752F00A4A50C /* Images.xcassets */,
 				E19CBFB0198E752F00A4A50C /* Supporting Files */,
 			);
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19CBFB6198E752F00A4A50C /* main.m in Sources */,
+				E1A239EA19A2EC6600930DC4 /* IconPickerViewController.m in Sources */,
 				E19CBFC0198E752F00A4A50C /* ChecklistViewController.m in Sources */,
 				E12F3B83199BD16100FF8BA3 /* DataModel.m in Sources */,
 				E12F3B7A1999054500FF8BA3 /* AllListsViewController.m in Sources */,
