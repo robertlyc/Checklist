@@ -16,5 +16,5 @@
 - (NSInteger)indexOfSelectedChecklist;
 - (void)setIndexOfSelectedChecklist:(NSInteger)index;
 - (void)sortChecklists;
-
++ (NSUInteger)nextChecklistItemId;
 @end
