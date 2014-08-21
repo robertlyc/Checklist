@@ -30,12 +30,16 @@
         item.shouldRemind = self.switchControl.on;
         item.dueDate = _dueDate;
         
+        [item scheduleNotification];
+        
         [self.delegate itemDetailViewController:self didFinishAddingItem:item];
     } else {
         self.itemToEdit.text = self.textField.text;
         [self.delegate itemDetailViewController:self didFinishEditingItem:self.itemToEdit];
         self.itemToEdit.shouldRemind = self.switchControl.on;
         self.itemToEdit.dueDate = _dueDate;
+        
+        [self.itemToEdit scheduleNotification];
     }
 }
 
@@ -175,23 +179,6 @@
     _dueDate = datePicker.date;
     [self updateDueDateLabel];
 }
-//- (void)hideDatePicker
-//{
-//    if (_datePickerVisible) {
-//        _datePickerVisible = NO;
-//        
-//        NSIndexPath *indexPathDateRow = [NSIndexPath indexPathForRow:1 inSection:1];
-//        NSIndexPath *indexPathDatePicker = [NSIndexPath indexPathForRow:2 inSection:1];
-//        
-//        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathDateRow];
-//        cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
-//        
-//        [self.tableView beginUpdates];
-//        [self.tableView reloadRowsAtIndexPaths:@[indexPathDateRow] withRowAnimation:UITableViewRowAnimationNone];
-//        [self.tableView deleteRowsAtIndexPaths:@[indexPathDatePicker] withRowAnimation:UITableViewRowAnimationFade];
-//        [self.tableView endUpdates];
-//    }
-//}
 
 - (void)hideDatePicker {
     if (_datePickerVisible) {

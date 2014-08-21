@@ -11,8 +11,11 @@
 
 @implementation ChecklistItem
 
-- (void)toggleChecked {
-    self.checked = !self.checked;
+- (id)init {
+    if (self = [super init]) {
+        self.itemId = [DataModel nextChecklistItemId];
+    }
+    return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
@@ -34,11 +37,23 @@
     return self;
 }
 
-- (id)init {
-    if (self = [super init]) {
-        self.itemId = [DataModel nextChecklistItemId];
+- (void)toggleChecked {
+    self.checked = !self.checked;
+}
+
+- (void)scheduleNotification {
+    if (self.shouldRemind && [self.dueDate compare:[NSDate date]] != NSOrderedAscending) {
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = self.dueDate;
+        localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        localNotification.alertBody = self.text;
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        
+        localNotification.userInfo = @{@"itemID": @(self.itemId)};
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
+        NSLog(@"Scheduled notification %@ for itemId %d", localNotification, self.itemId);
     }
-    return self;
 }
 
 @end
